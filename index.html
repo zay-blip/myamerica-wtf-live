@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My America</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      min-height: 100%;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: #05070d;
+      color: #f5f7fb;
+    }
+    main {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      letter-spacing: .06em;
+      font-weight: 700;
+    }
+    .stage {
+      width: min(960px, 100%);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 24px 80px rgba(0,0,0,.55);
+      background: #000;
+      aspect-ratio: 16 / 9;
+    }
+    video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #000;
+    }
+    p {
+      opacity: .7;
+      font-size: .95rem;
+      max-width: 36rem;
+      line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>My America</h1>
+    <div class="stage">
+      <video
+        controls
+        playsinline
+        preload="metadata"
+        poster=""
+        src="assets/MyAmerica_WTF_Deep_Orchestral_Trailer.mp4"
+      >
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p>Deep orchestral trailer</p>
+  </main>
+</body>
+</html>
