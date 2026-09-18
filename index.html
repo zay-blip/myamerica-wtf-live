@@ -1,1 +1,23 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MyAmerica.WTF</title>
+<meta name="theme-color" content="#050910"/>
+</head>
+<body style="margin:0;background:#050910;color:#e8eef6;font-family:sans-serif">
+<script>
+(function(){
+  var bubble = `\n<div id="ma-ms1" style="position:fixed;left:14px;bottom:16px;z-index:80;font-family:Outfit,IBM Plex Sans,system-ui,sans-serif;">\n  <button type="button" id="ma-ms1-btn" aria-expanded="false" style="width:86px;height:86px;border-radius:999px;border:1px solid rgba(226,180,74,.55);background:radial-gradient(circle at 30% 30%,rgba(226,180,74,.28),rgba(5,9,16,.92));color:#f3d37a;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:10px;line-height:1.15;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.45);">Mission<br>1</button>\n  <div id="ma-ms1-panel" hidden style="position:absolute;left:0;bottom:98px;width:min(320px,86vw);background:rgba(8,14,24,.94);border:1px solid rgba(226,180,74,.32);border-radius:14px;padding:12px 14px 14px;color:#e8eef6;">\n    <p style=\"margin:0 0 6px;color:#e2b44a;font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;\">Mission 1 · original</p>\n    <p style=\"margin:0 0 10px;font-size:14px;line-height:1.4;\">A Declaration to the American People. Words unchanged.</p>\n    <div style=\"display:flex;flex-wrap:wrap;gap:8px;\">\n      <a href=\"/mission\" style=\"background:#e2b44a;color:#141108;text-decoration:none;border-radius:999px;padding:6px 10px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;\">Open Mission 1</a>\n      <a href=\"/vector\" style=\"border:1px solid rgba(226,180,74,.35);color:#e8eef6;text-decoration:none;border-radius:999px;padding:6px 10px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;\">Vector sphere</a>\n    </div>\n  </div>\n</div>\n<script>(function(){var b=document.getElementById('ma-ms1-btn');var p=document.getElementById('ma-ms1-panel');if(b&&p){b.addEventListener('click',function(e){e.stopPropagation();var open=p.hasAttribute('hidden');if(open)p.removeAttribute('hidden');else p.setAttribute('hidden','');});}})();<\/script>\n`;
+  fetch('/404.html',{cache:'no-store'}).then(function(r){return r.text()}).then(function(html){
+    document.open();
+    document.write(html.replace('</body>', bubble + '</body>'));
+    document.close();
+  }).catch(function(){
+    document.body.innerHTML = '<p style="padding:24px">Map failed to load. Use <a href="/mission" style="color:#e2b44a">Mission 1</a> or <a href="/vector" style="color:#e2b44a">Vector</a>.</p>' + bubble;
+  });
+})();
+</script>
+</body>
+</html>
