@@ -5,19 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>MyAmerica.WTF</title>
 <meta name="theme-color" content="#050910"/>
+<meta name="description" content="MyAmerica.WTF — under construction. Contact Zay at mycountry."/>
+<style>
+  html,body{margin:0;padding:0;background:#050910;color:#e8eef6;font-family:system-ui,-apple-system,sans-serif;min-height:100%;}
+  .wrap{max-width:480px;margin:0 auto;padding:24px 16px 48px;display:flex;flex-direction:column;align-items:center;gap:20px;}
+  video{width:100%;max-height:85vh;border-radius:12px;background:#000;display:block;}
+  .uc{width:100%;border:2px solid #e2b44a;border-radius:12px;overflow:hidden;background:rgba(8,12,18,.92);}
+  .uc-bar{height:10px;background:repeating-linear-gradient(135deg,#e2b44a 0 12px,#111 12px 24px);}
+  .uc-body{padding:14px 16px;text-align:center;}
+  .uc-body p{margin:0 0 6px;color:#e2b44a;font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;}
+  .contact{margin:0;text-align:center;font-size:15px;line-height:1.5;color:#e8eef6;}
+  .contact a{color:#e2b44a;text-decoration:none;font-weight:700;}
+  .contact a:hover{text-decoration:underline;}
+</style>
 </head>
-<body style="margin:0;background:#050910;color:#e8eef6;font-family:sans-serif">
-<script>
-(function(){
-  var bubble = `\n<div id="ma-ms1" style="position:fixed;left:14px;bottom:16px;z-index:80;font-family:Outfit,IBM Plex Sans,system-ui,sans-serif;">\n  <button type="button" id="ma-ms1-btn" aria-expanded="false" style="width:86px;height:86px;border-radius:999px;border:1px solid rgba(226,180,74,.55);background:radial-gradient(circle at 30% 30%,rgba(226,180,74,.28),rgba(5,9,16,.92));color:#f3d37a;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:10px;line-height:1.15;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.45);">Mission<br>1</button>\n  <div id="ma-ms1-panel" hidden style="position:absolute;left:0;bottom:98px;width:min(320px,86vw);background:rgba(8,14,24,.94);border:1px solid rgba(226,180,74,.32);border-radius:14px;padding:12px 14px 14px;color:#e8eef6;">\n    <p style=\"margin:0 0 6px;color:#e2b44a;font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;\">Mission 1 · original</p>\n    <p style=\"margin:0 0 10px;font-size:14px;line-height:1.4;\">A Declaration to the American People. Words unchanged.</p>\n    <div style=\"display:flex;flex-wrap:wrap;gap:8px;\">\n      <a href=\"/mission\" style=\"background:#e2b44a;color:#141108;text-decoration:none;border-radius:999px;padding:6px 10px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;\">Open Mission 1</a>\n      <a href=\"/vector\" style=\"border:1px solid rgba(226,180,74,.35);color:#e8eef6;text-decoration:none;border-radius:999px;padding:6px 10px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;\">Vector sphere</a>\n    </div>\n  </div>\n</div>\n<script>(function(){var b=document.getElementById('ma-ms1-btn');var p=document.getElementById('ma-ms1-panel');if(b&&p){b.addEventListener('click',function(e){e.stopPropagation();var open=p.hasAttribute('hidden');if(open)p.removeAttribute('hidden');else p.setAttribute('hidden','');});}})();<\/script>\n`;
-  fetch('/404.html',{cache:'no-store'}).then(function(r){return r.text()}).then(function(html){
-    document.open();
-    document.write(html.replace('</body>', bubble + '</body>'));
-    document.close();
-  }).catch(function(){
-    document.body.innerHTML = '<p style="padding:24px">Map failed to load. Use <a href="/mission" style="color:#e2b44a">Mission 1</a> or <a href="/vector" style="color:#e2b44a">Vector</a>.</p>' + bubble;
-  });
-})();
-</script>
+<body>
+  <main class="wrap">
+    <video
+      src="/videos/MyAmericaWTF_intro_mobile_v3.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      webkit-playsinline
+      controls
+      poster=""
+      aria-label="MyAmerica.WTF intro"
+    ></video>
+    <aside class="uc" role="status" aria-label="Under construction">
+      <div class="uc-bar"></div>
+      <div class="uc-body"><p>Under Construction</p></div>
+      <div class="uc-bar"></div>
+    </aside>
+    <p class="contact">Contact Zay at <a href="https://mycountry.wtf">mycountry</a></p>
+  </main>
 </body>
 </html>
